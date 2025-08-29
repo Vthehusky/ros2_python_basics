@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+        'heartbeat_executable = mars_rover_systems.heartbeat:main'
         ],
     },
 )
