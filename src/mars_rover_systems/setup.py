@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'mars_rover_systems'
 
@@ -10,6 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        #(os.path.join('share', package_name), glob('launch/*.launch.py')),
+        (os.path.join('share', package_name), glob('launch/start_mars_rover_systems.launch.py'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -22,6 +26,7 @@ setup(
         'console_scripts': [
         'heartbeat_executable = mars_rover_systems.heartbeat:main',
         'heartbeat_executable2 = mars_rover_systems.heartbeat:main2',
+        'temperaturemonitor_executable = mars_rover_systems.temperature_monitor:start_monitor',
         'heartbeat_shutdown_executable = mars_rover_systems.heartbeat:main_shutdown'
         ],
     },
