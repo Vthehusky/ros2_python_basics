@@ -24,10 +24,10 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        'heartbeat_executable = mars_rover_systems.heartbeat:main',
-        'heartbeat_executable2 = mars_rover_systems.heartbeat:main2',
+        #'heartbeat_executable = mars_rover_systems.heartbeat:main',
+        #'heartbeat_executable2 = mars_rover_systems.heartbeat:main2',
         'temperaturemonitor_executable = mars_rover_systems.temperature_monitor:start_monitor',
-        'heartbeat_shutdown_executable = mars_rover_systems.heartbeat:main_shutdown'
+        #'heartbeat_shutdown_executable = mars_rover_systems.heartbeat:main_shutdown'
         ],
     },
 )
